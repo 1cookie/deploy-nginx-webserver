@@ -1,4 +1,5 @@
-# deploy-nginx-webserver
+# Deploy nginx webserver locally
+
 Bash script to automate this process
 
 ## Pre-requisites
