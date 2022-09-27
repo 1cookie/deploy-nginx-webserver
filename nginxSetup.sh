@@ -9,6 +9,7 @@ done
 
 printf "Socket information found:-\n"
 ls /var/run/php
+printf "==========================\n"
 
 re="php[0-9]\.[0-9]-fpm.sock"
 while ! [[ "${socket}" =~ ${re} ]] 
@@ -51,6 +52,8 @@ server {
     return 302 https://\$server_name\$request_uri;
 }
 EOF
+
+sudo ln -s /etc/nginx/sites-available/"${domain}" /etc/nginx/sites-enabled/
 
 fullPath="/var/www/${domain}"
 
